@@ -1,0 +1,242 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(Roboto-black.ttf) format("ttf");
+}
+
+body {
+  font-family: "Roboto";
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header chat-box"
+    "cam-and-controls chat-box";
+  row-gap: 10px;
+  column-gap: 15px;
+}
+
+.header {
+  grid-area: header;
+  background-color: lightgray;
+  color: aquamarine;
+  display: flex;
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 17px;
+}
+
+.caller-cam {
+  display: flex;
+  border: none;
+  margin: 15px;
+  border-radius: 10px;
+  grid-area: cam-and-caller-name;
+}
+
+.your-cam {
+    display: none;
+}
+
+.cam-and-controls {
+  grid-area: cam-and-controls;
+  height: 600px;
+  width: 1110px;
+  background-image: url(https://picsum.photos/1110/600);
+  background-repeat: no-repeat;
+  border-radius: 17px;
+  display: grid;
+  grid-template-columns: 20% 40% 40%;
+  grid-template-rows: 97% 3%;
+  grid-template-areas:
+    "cam-and-caller-name . ."
+    ". controls .";
+}
+
+.caller-name-cam {
+  grid-area: cam-and-caller-name;
+  text-align: center;
+  margin-left: 26%;
+  margin-top: 20%;
+  border: none;
+  border-radius: 40px;
+  background-color: lightgray;
+  height: 5%;
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  color: aquamarine;
+}
+
+.controls {
+  grid-area: controls;
+  display: flex;
+  justify-content: center;
+  margin-left: 37%;
+  border: none;
+  border-radius: 40px;
+  background-color: lightgray;
+  height: 70px;
+  width: 75%;
+}
+
+.mic {
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  height: 20px;
+  margin: 3%;
+  background-color: white;
+}
+.cam {
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  height: 20px;
+  margin: 3%;
+  background-color: white;
+}
+.hang {
+  border: none;
+  border-radius: 50%;
+  padding: 20px 15px;
+  height: 10px;
+  margin: 3%;
+  background-color: white;
+}
+.share {
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  height: 20px;
+  margin: 3%;
+  background-color: white;
+}
+
+.chat-box {
+  grid-area: chat-box;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 40% 40% 20%;
+  grid-template-areas:
+    "chat-participant"
+    "messages"
+    "chat-function";
+  background-color: lightgray;
+  border-radius: 17px;
+}
+
+.chat {
+  grid-area: chat-participant;
+  text-align: left;
+  margin-left: 5%;
+}
+.participant {
+  grid-area: chat-participant;
+  text-align: right;
+  margin-right: 5%;
+}
+
+
+
+.button {
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+input {
+  grid-area: chat-function;
+  width: 45%;
+  height: 50%;
+  border: none;
+  border-radius: 17px;
+  background-color: rgb(180, 178, 178);
+  margin-left: 5%;
+  margin-top: 13%;
+  padding: 0% 10% 0% 10%;
+  font-size: medium;
+  color: purple;
+}
+
+.send {
+  grid-area: chat-function;
+  border-radius: 50%;
+  background-color: rgb(180, 178, 178);
+  padding: 5%;
+  margin-left: 75%;
+  margin-top: 13%;
+}
+.your-message-1 {
+  grid-area: messages;
+  text-align: right;
+  padding-right: 4%;
+  margin-right: 5%;
+  margin-left: 30%;
+  border-radius: 17px;
+  background-color: rgb(180, 178, 178);
+  height: 25%;
+  width: 60%;
+  color: purple;
+}
+.your-message-2 {
+  grid-area: messages;
+  text-align: right;
+  padding-right: 20%;
+  margin-top: 50%;
+  margin-right: 5%;
+  margin-left: 25%;
+  border-radius: 17px;
+  background-color: rgb(180, 178, 178);
+  height: 25%;
+  width: 50%;
+  color: purple;
+}
+.their-message {
+  grid-area: messages;
+  text-align: left;
+  padding-left: 4%;
+  margin-top: 25%;
+  margin-left: 5%;
+  margin-right: 20%;
+  border-radius: 17px;
+  background-color: rgb(180, 178, 178);
+  height: 25%;
+  width: 70%;
+  color: purple;
+}
+
+img:hover {
+    background-color: aquamarine;
+}
+
+div.header:hover{
+    color: hotpink;
+    background-color: aquamarine;
+}
+
+input:hover {
+    background-color: aquamarine;
+}
+
+div.chat-box:hover{
+    background-color: hotpink;
+    color: aquamarine;
+}
+
+div.text:hover {
+    background-color: aquamarine;
+    color: hotpink;
+}
+.caller-name-cam:hover {
+    background-color: aquamarine;
+    color: hotpink;
+}
+
+.controls:hover {
+    background-color: hotpink;
+}
